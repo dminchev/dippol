@@ -1,0 +1,58 @@
+!!!5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+%html.no-js
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    
+    -# To set titles and descriptions globally and for each individual page, see /DOCS.md
+    %title= page_title
+    %meta{:content => page_description, :name => "description"}
+    
+    %meta{:content => "width=device-width", :name => "viewport"}
+    
+    -#Favicon Options:
+    -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
+    -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
+    
+    
+    = javascript_include_tag "vendor/modernizr-2.6.1.min"
+    = stylesheet_link_tag "site"
+  %body
+    /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    
+    %header#header
+      .wrapper.clearfix
+        .holder-logo
+          = link_to '/', anchor: 'header' do
+            = image_tag 'logo.png', class: :logo
+            .slogan= I18n.t('slogans.gps_system_for_monitoring_your_vehicles') 
+        
+        %nav.clearfix
+          %ul.clearfix
+            %li= link_to I18n.t('nav.how_it_works'), '/', anchor: 'how_it_works'
+            %li= link_to I18n.t('nav.products'), '/', anchor: 'products'
+            %li= link_to I18n.t('nav.services'), '/', anchor: 'services'
+            %li= link_to I18n.t('nav.about'), '/', anchor: 'about_us'
+            %li= link_to I18n.t('nav.contacts'), '/', anchor: 'contact_us'
+        
+          = link_to I18n.t('actions.order_now'), '/', anchor: 'contact_us', class: 'order-now'
+    %section#content{role: 'main'}
+      = yield
+        
+    %footer#footer
+      .wrapper
+        footer
+    
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
+    :javascript
+      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
+    = javascript_include_tag "site"
+    
+    :javascript
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

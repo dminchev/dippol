@@ -3,6 +3,7 @@
 //HTML5 Boilerplate + Normalize
 *= require "_vendor/normalize.css"
 *= require "_vendor/html5bp.css"
+*= require "_vendor/reveal.css"
 
 */
 
@@ -286,7 +287,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 40px;
 
     li {
-      position: relative;
       width: 50%;
       float: left;
       margin-bottom: 30px;
@@ -310,11 +310,22 @@ h1, h2, h3, h4, h5, h6 {
         width: 290px;
 
         a.read-more {
-          color: $clr-orange;
-          text-decoration: underline;
-          text-transform: lowercase;
+          display: inline-block;
+          padding: 8px 15px;
+          background: $clr-orange;
+          @include border-top-radius(4px);
+          @include border-bottom-radius(4px);
+          
           font-family: $helvetica;
-          font-size: 12px;
+          font-size: 13px;
+          font-weight: 300;
+          color: $clr-white;
+          text-decoration: none;
+          text-transform: lowercase;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
 
@@ -324,5 +335,84 @@ h1, h2, h3, h4, h5, h6 {
         }
       }
     }
+  }
+}
+
+.product-view {
+  padding: 40px 0;
+
+  h1, h2, h3 {
+    &.title {
+      text-align: left;
+      border-bottom: 1px dashed $clr-blue;
+      display: inline-block;
+    }
+  }
+
+  aside.sidebar {
+    float: right;
+    margin: 50px 120px 20px 120px;
+    text-align: center;
+
+    img {
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    a.order-now {
+      display: inline-block;
+      padding: 8px 15px;
+      background: $clr-orange;
+      @include border-top-radius(4px);
+      @include border-bottom-radius(4px);
+      
+      font-family: $helvetica;
+      font-size: 13px;
+      font-weight: 300;
+      color: $clr-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  article.products-details {
+    text-align: justify;
+  }
+
+  ul.features {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    li {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      cursor: pointer;
+      float: left;
+      width: 445px;
+      padding-left: 25px;
+      padding-right: 10px;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: -6px;
+        left: 7px;
+        color: $clr-blue;
+        font-weight: bold;
+        font-size: 18px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      &:nth-child(2n) {
+        padding-right: 0;
+        padding-left: 35px;
+      }
+
+    } 
   }
 }

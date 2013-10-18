@@ -1,0 +1,23 @@
+- name = 'autotrack_xl_gyro'
+#product-autotrack-xl-gyro.product-view
+  .wrapper
+    %h1.title= I18n.t("products.titles.#{name}")
+    %aside.sidebar
+      = image_tag "products/#{name.gsub('_', '-')}-square.png"
+      = link_to I18n.t('actions.order_now'), "order.html", class: 'order-now'
+    %article.products-details.clearfix
+      %p= I18n.t("products.details.#{name}.p1")
+      %p= I18n.t("products.details.#{name}.p2")
+      %p= I18n.t("products.details.#{name}.p3")
+
+    %h2.title= I18n.t('titles.product_features')
+    %ul.features.clearfix
+      - I18n.t("products.details.#{name}.features").each do |feature|
+        %li
+          %span +
+          = feature
+
+    %h2.title= I18n.t('titles.technical_spec')
+
+      
+

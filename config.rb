@@ -10,6 +10,7 @@ activate :i18n, :mount_at_root => :en
 #Bourbon.io
 activate :bourbon
 
+activate :directory_indexes
 
 ### 
 # Compass

@@ -66,15 +66,17 @@
     %h1.title= I18n.t('titles.products')
 
     %ul.clearfix
-      - %w(autotrack_xl_gyro autotrack_lite garmin_dezl_760LMT_7_inch).each do |item|
+      - %w(autotrack-xl-gyro autotrack-lite garmin-dezl-760LMT-7-inch).each do |item|
         %li.clearfix
           %aside
-            = image_tag "products/#{item}.png"
+            = image_tag "products/#{item}-square.png"
           %article
-            %h3= I18n.t("products.titles.#{item}")
-            %p= I18n.t("products.slogans.#{item}")
-            = link_to I18n.t('actions.read_more'), '#', class: 'read-more'
-            .popup-content.hidden
+            %h3= I18n.t("products.titles.#{item.gsub('-', '_')}")
+            %p= I18n.t("products.slogans.#{item.gsub('-', '_')}")
+            / = link_to I18n.t('actions.read_more'), '', id: "product-#{item}-link", class: 'read-more', data: {reveal_id: item}, anchor: "product-#{item}"
+            = link_to I18n.t('actions.read_more'), "products/#{item}.html", id: "product-#{item}-link", class: 'read-more'
+
+            .reveal-modal{id: item}
               %h1 
                 = item
                 Synth 8-bit chia letterpress Shoreditch High Life. 

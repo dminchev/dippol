@@ -20,7 +20,7 @@
           %span
           Improve your routine
 
-#how_it_works
+#how-it-works
   .wrapper
     %h1.title= I18n.t('titles.how_it_works')
 
@@ -61,26 +61,69 @@
         %article
           %p= I18n.t('how_it_works.step_manage_desc')
 
+#services
+  .wrapper
+    %h1.title= I18n.t('titles.services')
+
+    %ul.services
+      %li
+        %span Active system Lite
+      %li
+        %span Active system XL
+
+    %h1.title= I18n.t('titles.benefits')
+
+    %ul.benefits.clearfix
+      - I18n.t('services.labels').each do |item|
+        %li
+          %h2= item
+
+    - if false
+      %ul.features.clearfix
+        %li
+          %h2= I18n.t('services.labels.basic')
+          %ul.list
+            - I18n.t('services.features.basic').each do |item|
+              %li= item
+
+        %li
+          %h2= I18n.t('services.labels.extended')
+          %ul.list
+            - I18n.t('services.features.extended').each do |item|
+              %li= item
+        %li
+          %h2 Add-ons
+          %ul.list
+            %li Item 1
+            %li Item 2
+            %li Item 3
+            %li Item 4
+
 #products
   .wrapper
     %h1.title= I18n.t('titles.products')
 
     %ul.clearfix
-      - %w(autotrack-xl-gyro autotrack-lite garmin-dezl-760LMT-7-inch).each do |item|
+      - %w(autotrack-xl-gyro autotrack-lite garmin-dezl-760LMT-7-inch super-trackstick-gps-tracking-device).each do |item|
         %li.clearfix
           %aside
-            = image_tag "products/#{item}-square.png"
+            = link_to "products/#{item}.html" do
+              = image_tag "products/#{item}-square.png"
           %article
             %h3= I18n.t("products.titles.#{item.gsub('-', '_')}")
             %p= I18n.t("products.slogans.#{item.gsub('-', '_')}")
-            / = link_to I18n.t('actions.read_more'), '', id: "product-#{item}-link", class: 'read-more', data: {reveal_id: item}, anchor: "product-#{item}"
             = link_to I18n.t('actions.read_more'), "products/#{item}.html", id: "product-#{item}-link", class: 'read-more'
+#configurator
+  .wrapper
+    %h1.title= I18n.t('titles.configurator')
 
-            .reveal-modal{id: item}
-              %h1 
-                = item
-                Synth 8-bit chia letterpress Shoreditch High Life. 
-              %p Fap blog Austin Banksy, chillwave ennui Schlitz Blue Bottle Cosby sweater labore magna. Occupy YOLO meggings disrupt, hoodie accusamus qui Neutra excepteur Godard literally single-origin coffee. McSweeney's assumenda biodiesel ut, excepteur flexitarian Thundercats locavore single-origin coffee labore Marfa bicycle rights Austin skateboard.
+#about-us
+  .wrapper
+    %h1.title= I18n.t('titles.about')
 
+#contact-us
+  .wrapper
+    %h1.title= I18n.t('titles.contacts')
+    #map
 
 

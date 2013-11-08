@@ -18,8 +18,9 @@
     -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
     
     
-    = javascript_include_tag "vendor/modernizr-2.6.1.min"
-    = stylesheet_link_tag "site"
+    = javascript_include_tag "vendor/modernizr-2.6.1.min", '//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'
+    = stylesheet_link_tag "//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css", "site"
+    
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     
@@ -32,19 +33,19 @@
         
         %nav.clearfix
           %ul.clearfix
-            %li= link_to I18n.t('nav.how_it_works'), '/', anchor: 'how_it_works'
-            %li= link_to I18n.t('nav.products'), '/', anchor: 'products'
-            %li= link_to I18n.t('nav.services'), '/', anchor: 'services'
-            %li= link_to I18n.t('nav.about'), '/', anchor: 'about_us'
-            %li= link_to I18n.t('nav.contacts'), '/', anchor: 'contact_us'
+            %li= link_to I18n.t('nav.how_it_works'), '/', anchor: 'how-it-works', data: {anchor: 'how-it-works'}
+            %li= link_to I18n.t('nav.services'), '/', anchor: 'services', data: {anchor: 'services'}
+            %li= link_to I18n.t('nav.products'), '/', anchor: 'products', data: {anchor: 'products'}
+            %li= link_to I18n.t('nav.about'), '/', anchor: 'about-us', data: {anchor: 'about-us'}
+            %li= link_to I18n.t('nav.contacts'), '/', anchor: 'contact-us', data: {anchor: 'contact-us'}
         
-          = link_to I18n.t('actions.order_now'), '/', anchor: 'contact_us', class: 'order-now'
+          = link_to I18n.t('actions.order_now'), '/', anchor: 'contact-us', class: 'order-now'
     %section#content{role: 'main'}
       = yield
         
     %footer#footer
       .wrapper
-        footer
+        footer will be awesome
     
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
     :javascript

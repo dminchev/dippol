@@ -18,6 +18,15 @@
           = feature
 
     %h2.title= I18n.t('titles.technical_spec')
+    .tech.clearfix
+      %article
+        - I18n.t("products.details.#{name}.tech").take(5).each do |item|
+          %h4= item['name']
+          = item['options'].join '<br>'
+      %article
+        - item = I18n.t("products.details.#{name}.tech").last
+        %h4= item['name']
+        = item['options'].join '<br>'
 
       
 

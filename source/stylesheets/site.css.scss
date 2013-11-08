@@ -27,6 +27,7 @@ $myriad: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
 }
 
 body {
+  padding-top: 80px;
   background: $clr-grey;
   font-family: $helvetica;
   font-size: 13px;
@@ -57,14 +58,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header {
-  height: 100px;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 80px;
   background: $clr-white;
   border-bottom: 1px solid $clr-grey-darker;
   
   .holder-logo {
     width: 210px;
     float: left;
-    margin-top: 24px;
+    margin-top: 14px;
 
     a { 
       display: block;
@@ -86,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     
     ul {
       margin: 0;
-      margin-top: 42px;
+      margin-top: 32px;
       float: left;
     }
 
@@ -120,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
       float: left;
       display: inline-block;
       padding: 10px 25px;
-      margin-top: 29px;
+      margin-top: 19px;
       background: $clr-orange;
       @include border-top-radius(4px);
       @include border-bottom-radius(4px);
@@ -133,6 +138,12 @@ h1, h2, h3, h4, h5, h6 {
       text-transform: uppercase;
     }
   }
+}
+
+#footer {
+  margin: 40px 0;
+  font-family: $georgia;
+  font-size: 14px;
 }
 
 #intro {
@@ -214,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#how_it_works {
+#how-it-works {
   padding: 40px 0;
   background: $clr-white;
   border-bottom: 1px solid $clr-grey-darker;
@@ -280,8 +291,84 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#services {
+  padding: 40px 0;
+  border-bottom: 1px solid $clr-grey-dark;
+  border-right: 0;
+  border-left: 0;
+  // background: $clr-white;
+
+  // h1, h2, h3, h4, h5 {
+  h1 {
+    // color: $clr-white;
+  }
+
+  ul.benefits, ul.services {
+    margin-top: 40px;
+  }
+
+  ul.services > li {
+    float: left;
+    width: 50%;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  ul.benefits > li {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    // background: $clr-grey;
+    background: $clr-white;
+    @include border-top-radius(4px);
+    @include border-bottom-radius(4px);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+
+    &:nth-child(2), &:nth-child(5) {
+      background: $clr-blue;
+      color: $clr-white;
+
+      h2 {
+        color: $clr-white;
+      }
+    }
+
+    &:nth-child(3), &:nth-child(6) {
+      margin-right: 0;
+      background: $clr-orange;
+      color: $clr-white;
+
+      h2 {
+        color: $clr-white;
+      }
+    }
+  }
+
+  ul.list {
+    margin: 20px 40px;
+    margin-top: 0;
+    li {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+  
+}
 #products {
   padding: 40px 0;
+  background: $clr-white;
+  border-bottom: 1px solid $clr-grey-darker;
 
   ul {
     margin-top: 40px;
@@ -357,6 +444,7 @@ h1, h2, h3, h4, h5, h6 {
     img {
       display: block;
       margin-bottom: 40px;
+      border: 1px solid $clr-orange;
     }
 
     a.order-now {
@@ -389,7 +477,8 @@ h1, h2, h3, h4, h5, h6 {
 
     li {
       margin-bottom: 5px;
-      padding-bottom: 5px;
+      padding-bottom: 6px;
+      padding-top: 6px;
       cursor: pointer;
       float: left;
       width: 445px;
@@ -397,9 +486,16 @@ h1, h2, h3, h4, h5, h6 {
       padding-right: 10px;
       position: relative;
 
+      &:hover {
+        border-bottom: 1px dashed $clr-blue;
+        border-top: 1px dashed $clr-blue;
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
       span {
         position: absolute;
-        top: -6px;
+        top: -1px;
         left: 7px;
         color: $clr-blue;
         font-weight: bold;
@@ -415,4 +511,41 @@ h1, h2, h3, h4, h5, h6 {
 
     } 
   }
+
+  .tech {
+    h4 {
+      margin: 20px 0 5px 0;
+    }
+
+    article {
+      float: left;
+      width: 465px;
+      padding-right: 15px;
+
+      &:nth-child(2n) {
+        padding-right: 0;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+#configurator {
+  padding: 40px 0;
+  border-bottom: 1px solid $clr-grey-darker;
+}
+
+#about-us {
+  padding: 40px 0;
+  background: $clr-white;
+  border-bottom: 1px solid $clr-grey-darker;
+}
+
+#contact-us {
+  padding: 40px 0;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }

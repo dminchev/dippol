@@ -1,5 +1,5 @@
-- name = 'garmin_dezl_760LMT_7_inch'
-#product-garmin-dezl-760LMT-7-inch.product-view
+- name = 'super_trackstick_gps_tracking_device'
+#product-super-trackstick-gps-tracking-device.product-view
   .wrapper
     %h1.title= I18n.t("products.titles.#{name}")
     %aside.sidebar
@@ -7,8 +7,8 @@
       = link_to I18n.t('actions.order_now'), "order.html", class: 'order-now'
     %article.products-details.clearfix
       %p= I18n.t("products.details.#{name}.p1")
-      / %p= I18n.t("products.details.#{name}.p2")
-      / %p= I18n.t("products.details.#{name}.p3")
+      %p= I18n.t("products.details.#{name}.p2")
+      %p= I18n.t("products.details.#{name}.p3")
 
     %h2.title= I18n.t('titles.product_features')
     %ul.features.clearfix

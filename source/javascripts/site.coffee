@@ -30,7 +30,7 @@ $(document).ready ->
   #   location.hash = $(this).attr 'id'
 
   doc.on 'click', '#header nav a', ->
-    event.preventDefault()
+    event.preventDefault() unless $('.product-view').length > 0
     scrollToElement $('#' + $(this).data('anchor'))
     location.hash = $(this).data('anchor')
     # location.hash = '#' + $(this).data('anchor')

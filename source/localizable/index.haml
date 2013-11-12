@@ -115,7 +115,7 @@
             = link_to "products/#{item}.html" do
               = image_tag "products/#{item}-square.png"
           %article
-            %h3= I18n.t("products.titles.#{item.gsub('-', '_')}")
+            %h3= link_to I18n.t("products.titles.#{item.gsub('-', '_')}"), "products/#{item}.html"
             %p= I18n.t("products.slogans.#{item.gsub('-', '_')}")
             = link_to I18n.t('actions.read_more'), "products/#{item}.html", id: "product-#{item}-link", class: 'read-more'
 #configurator

@@ -4,7 +4,7 @@
     %h1.title= I18n.t("products.titles.#{name}")
     %aside.sidebar
       = image_tag "products/#{name.gsub('_', '-')}-square.png"
-      = link_to I18n.t('actions.order_now'), "order.html", class: 'order-now'
+      = link_to I18n.t('actions.order_now'), "/#contact-us", class: 'order-now'
     %article.products-details.clearfix
       %p= I18n.t("products.details.#{name}.p1")
       / %p= I18n.t("products.details.#{name}.p2")

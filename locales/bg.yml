@@ -77,9 +77,9 @@ bg:
       super_trackstick_gps_tracking_device: 'Super Trackstick GPS Tracking Device'
     slogans:
       autotrack_xl_gyro: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
-      autotrack_lite: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
-      garmin_dezl_760LMT_7_inch: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
-      super_trackstick_gps_tracking_device: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
+      autotrack_lite: 'Autotrack Lite е олекотена версия на за GPS наблюдение и контрол на Вашия автопарк.'
+      garmin_dezl_760LMT_7_inch: '7 инчова навигация улесняваща намирането и следването на маршрути.'
+      super_trackstick_gps_tracking_device: 'Super Trackstick е устройство, което не се нуждае от монтаж и събира подробна информация за автомобила пренасящ го'
     details:
       autotrack_xl_gyro:
         p1: "Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време."

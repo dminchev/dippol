@@ -86,9 +86,20 @@ configure :build do
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  require "middleman-smusher"
+  activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = "37.139.12.189"
+  deploy.path   = "/mnt/www/dippol.com/current/public"
+  deploy.user  = "root"
+  deploy.build_before = true
+
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
 end

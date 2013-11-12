@@ -7,3 +7,5 @@ gem 'redcarpet'
 
 gem 'coffee-filter' # Coffeescript filter for HAML
 gem 'middleman-bourbon'
+gem 'middleman-deploy'
+gem 'middleman-smusher'

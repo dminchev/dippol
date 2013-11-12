@@ -12,11 +12,13 @@
     %meta{:content => page_description, :name => "description"}
 
     %meta{:content => "width=device-width", :name => "viewport"}
+    %meta{content: "application/xhtml+xml; charset=utf-8", "http-equiv" => "content-type"}/
+    %staticcontent
+      %mimemap{fileextension: ".svg", mimetype: "image/svg+xml"}
 
     -#Favicon Options:
     -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
     -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
-
 
     = javascript_include_tag "vendor/modernizr-2.6.1.min", '//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'
     = stylesheet_link_tag "//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css", "site"
@@ -36,10 +38,10 @@
             %li= link_to I18n.t('nav.how_it_works'), '/', anchor: 'how-it-works', data: {anchor: 'how-it-works'}
             %li= link_to I18n.t('nav.services'), '/', anchor: 'services', data: {anchor: 'services'}
             %li= link_to I18n.t('nav.products'), '/', anchor: 'products', data: {anchor: 'products'}
-            %li= link_to I18n.t('nav.about'), '/', anchor: 'about-us', data: {anchor: 'about-us'}
+            / %li= link_to I18n.t('nav.about'), '/', anchor: 'about-us', data: {anchor: 'about-us'}
             %li= link_to I18n.t('nav.contacts'), '/', anchor: 'contact-us', data: {anchor: 'contact-us'}
 
-          = link_to I18n.t('actions.order_now'), '/', anchor: 'contact-us', class: 'order-now'
+          = link_to I18n.t('actions.order_now'), '/', anchor: 'contact-us', class: 'order-now', data: {anchor: 'contact-us'}
     %section#content{role: 'main'}
       = yield
 
@@ -53,10 +55,14 @@
     = javascript_include_tag "vendor/imagesloaded.pkgd.min", "site"
 
     :javascript
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-45652526-1']);
+      _gaq.push(['_trackPageview']);
 
-      ga('create', 'UA-45652526-1', 'dippol.com');
-      ga('send', 'pageview');
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

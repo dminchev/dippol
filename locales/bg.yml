@@ -252,3 +252,11 @@ bg:
             options:
               - 'Option 1'
               - 'Option 2'
+  contacts:
+    office_plovdiv: 'Офис Пловдив'
+    office_plovdiv_address: 'гр. Пловдив, ул. "Гоздов Пазар" 2, ет. 2'
+    phones:
+      - '+359 887 495 203'
+      - '+359 888 516 773'
+    emails:
+      - 'gps@dippol.com'

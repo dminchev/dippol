@@ -127,8 +127,18 @@
     %h1.title= I18n.t('titles.about')
 
 #contact-us
-  .wrapper
+  .wrapper.clearfix
     %h1.title= I18n.t('titles.contacts')
+    %aside.details
+      %h2= I18n.t('contacts.office_plovdiv')
+      %address= I18n.t('contacts.office_plovdiv_address')
+      %ul.phones
+        - I18n.t('contacts.phones').each do |phone|
+          %li= phone
+      %ul.emails
+        - I18n.t('contacts.emails').each do |email|
+          %li= email
+
     #map
 
 

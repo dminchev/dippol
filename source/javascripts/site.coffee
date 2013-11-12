@@ -32,6 +32,7 @@ $(document).ready ->
   doc.on 'click', '#header nav a', ->
     event.preventDefault()
     scrollToElement $('#' + $(this).data('anchor'))
+    location.hash = $(this).data('anchor')
     # location.hash = '#' + $(this).data('anchor')
 
   fixHeight $("#services ul.features"), $("#services ul.features > li")
@@ -45,5 +46,5 @@ $(document).ready ->
     li2.height height
   )
 
-  map = L.mapbox.map("map", "somuchbetter.map-wchiw0sh").setView([42.135834,24.789566], 14)
+  map = L.mapbox.map("map", "somuchbetter.map-wchiw0sh").setView([42.14445,24.745889], 15)
   map.scrollWheelZoom.disable()

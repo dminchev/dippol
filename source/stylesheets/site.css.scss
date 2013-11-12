@@ -37,7 +37,7 @@ body {
 ul, ol, {
   margin: 0;
   padding: 0;
-  
+
   li {
     list-style-type: none;
   }
@@ -47,7 +47,7 @@ ul, ol, {
 h1, h2, h3, h4, h5, h6 {
   font-family: $helvetica;
   color: $clr-blue-dark;
-  
+
   &.title {
     color: $clr-blue;
     text-transform: uppercase;
@@ -65,13 +65,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 80px;
   background: $clr-white;
   border-bottom: 1px solid $clr-grey-darker;
-  
+
   .holder-logo {
     width: 210px;
     float: left;
     margin-top: 14px;
 
-    a { 
+    a {
       display: block;
       text-decoration: none;
       text-align: center;
@@ -83,12 +83,13 @@ h1, h2, h3, h4, h5, h6 {
       font-family: $helvetica;
       color: $clr-black;
       text-decoration: none;
+      width: 230px;
     }
   }
 
   nav {
     float: right;
-    
+
     ul {
       margin: 0;
       margin-top: 32px;
@@ -98,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     li {
       float: left;
       border-right: 1px solid $clr-grey-dark;
-      
+
       &:last-child {
         border-right: none;
       }
@@ -110,11 +111,11 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 11px;
         font-weight: 300;
         color: $clr-grey-dark;
-        
+
         text-transform: uppercase;
         text-decoration: none;
         @include transition (color 0.5s ease-in-out);
-        
+
         &:hover {
           color: $clr-orange;
         }
@@ -129,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
       background: $clr-orange;
       @include border-top-radius(4px);
       @include border-bottom-radius(4px);
-      
+
       font-family: $helvetica;
       font-size: 16px;
       font-weight: 300;
@@ -140,20 +141,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#footer {
-  margin: 40px 0;
-  font-family: $georgia;
-  font-size: 14px;
-}
-
 #intro {
   padding: 40px 0;
   border-bottom: 1px solid $clr-grey-darker;
-  
+
   .wrapper {
     position: relative;
   }
-  
+
   .truck {
     background: url(../images/truck-illustartion-small.png) no-repeat transparent;
     width: 239px;
@@ -173,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     cursor: pointer;
     @include transition (color 0.2s ease-in-out);
-    
+
     span {
       bottom: -2px;
       display: block;
@@ -187,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
     &:hover {
       // background: $clr-blue;
       color: $clr-orange;
-      
+
       span {
         background: $clr-orange;
       }
@@ -203,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
     &.left {
       left: 134px;
-      
+
       .tooltip {
         float: right;
         span {
@@ -213,8 +208,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     &.right {
-      right: 134px;
-      
+      right: 96px;
+
       .tooltip {
         float: left;
         span {
@@ -229,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 0;
   background: $clr-white;
   border-bottom: 1px solid $clr-grey-darker;
-  
+
   ul {
     margin-top: 40px;
     li {
@@ -238,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
       padding-right: 20px;
       position: relative;;
 
-      span.arrow { 
+      span.arrow {
         background: url('../images/arrow-right.png') no-repeat transparent;
         width: 48px;
         height: 48px;
@@ -255,11 +250,11 @@ h1, h2, h3, h4, h5, h6 {
           position: absolute;
           top: 0;
           left: 56px;
-          max-width: 120px;  
+          max-width: 120px;
           max-height: 120px;
           display: block;
           margin: 0 auto;
-          
+
         }
       }
 
@@ -277,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         margin-bottom: 10px;
         cursor: pointer;
-        
+
         &:hover {
           text-decoration: underline;
         }
@@ -303,17 +298,48 @@ h1, h2, h3, h4, h5, h6 {
     // color: $clr-white;
   }
 
-  ul.benefits, ul.services {
+  ul.benefits {
     margin-top: 40px;
   }
 
-  ul.services > li {
-    float: left;
-    width: 50%;
-    position: relative;
-    margin-bottom: 40px;
+  h2.title {
+    text-decoration: underline;
+    text-align: left;
+    margin-top: 40px;
+    text-transform: capitalize;
   }
-  
+
+  ul.services {
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    &.active_system_lite {
+      li {
+        float: left;
+        width: 50%;
+      }
+
+      article {
+        padding-right: 10px;
+      }
+
+      &:nth-child(2n) {
+        article {
+          padding-right: 0;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  ul.services > li {
+    margin-bottom: 5px;
+    // float: left;
+    // width: 50%;
+    // position: relative;
+    // margin-bottom: 40px;
+  }
+
   ul.benefits > li {
     float: left;
     width: 300px;
@@ -363,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
   h2 {
     font-weight: 300;
   }
-  
+
 }
 #products {
   padding: 40px 0;
@@ -402,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
           background: $clr-orange;
           @include border-top-radius(4px);
           @include border-bottom-radius(4px);
-          
+
           font-family: $helvetica;
           font-size: 13px;
           font-weight: 300;
@@ -453,14 +479,14 @@ h1, h2, h3, h4, h5, h6 {
       background: $clr-orange;
       @include border-top-radius(4px);
       @include border-bottom-radius(4px);
-      
+
       font-family: $helvetica;
       font-size: 13px;
       font-weight: 300;
       color: $clr-white;
       text-decoration: none;
       text-transform: uppercase;
-      
+
       &:hover {
         text-decoration: underline;
       }
@@ -509,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
         padding-left: 35px;
       }
 
-    } 
+    }
   }
 
   .tech {
@@ -530,12 +556,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// TODO: implement
 #configurator {
+  display: none;
   padding: 40px 0;
   border-bottom: 1px solid $clr-grey-darker;
 }
 
 #about-us {
+  display: none;
   padding: 40px 0;
   background: $clr-white;
   border-bottom: 1px solid $clr-grey-darker;
@@ -548,4 +577,16 @@ h1, h2, h3, h4, h5, h6 {
 #map {
   width: 100%;
   height: 400px;
+}
+
+#footer {
+  padding: 40px 0;
+  margin-top: 40px;
+  font-family: $georgia;
+  font-size: 14px;
+  background: $clr-grey-darker;
+
+  h1 {
+    font-size: 12px;
+  }
 }

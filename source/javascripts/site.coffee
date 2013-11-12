@@ -17,7 +17,7 @@ fixHeight = (holder, element) ->
 
 $(document).ready ->
   doc = $(document)
-  
+
   locationHash = location.hash
   unless locationHash is ''
     scrollToElement $(locationHash) if $(locationHash).length > 0
@@ -35,7 +35,8 @@ $(document).ready ->
     # location.hash = '#' + $(this).data('anchor')
 
   fixHeight $("#services ul.features"), $("#services ul.features > li")
-  
+  fixHeight $("#how-it-works ul"), $("#how-it-works ul h2")
+
   $(".product-view ul.features > li:nth-child(2n-1)").each(->
     li1 = $(this)
     li2 = $(this).next()

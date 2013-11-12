@@ -1,24 +1,24 @@
 #intro
   .wrapper
-    .holder-tooltips.left
-      %div
-        .tooltip
-          %span
-          Follow your cargo
-      %div
-        .tooltip
-          %span
-          Limit your expences
     .truck
-    .holder-tooltips.right
-      %div
-        .tooltip
-          %span
-          Manage every trip
-      %div
-        .tooltip
-          %span
-          Improve your routine
+      .holder-tooltips.left
+        %div
+          .tooltip
+            %span
+            = I18n.t('tooltips.follow_your_cargo')
+        %div
+          .tooltip
+            %span
+            = I18n.t('tooltips.limit_your_expences')
+      .holder-tooltips.right
+        %div
+          .tooltip
+            %span
+            = I18n.t('tooltips.manage_every_trip')
+        %div
+          .tooltip
+            %span
+            = I18n.t('tooltips.improve_your_routine')
 
 #how-it-works
   .wrapper
@@ -65,11 +65,16 @@
   .wrapper
     %h1.title= I18n.t('titles.services')
 
+    %h2.title= I18n.t('services.titles.active_system_lite')
+    %ul.services.active_system_lite.clearfix
+      - I18n.t('services.details.active_lite').each do |item|
+        %li
+          %article= item
+
+    %h2.title= I18n.t('services.titles.active_system_xl')
     %ul.services
-      %li
-        %span Active system Lite
-      %li
-        %span Active system XL
+      - I18n.t('services.details.active_xl').each do |item|
+        %li= item
 
     %h1.title= I18n.t('titles.benefits')
 

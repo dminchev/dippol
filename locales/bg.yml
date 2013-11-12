@@ -1,6 +1,20 @@
 ---
 bg:
   hello: 'Здравей'
+  company_name: 'Дипол'
+  meta:
+    title: 'GPS системи за контрол и наблюдение на автопарк България, Европа и света'
+    description: 'GPS системи за контрол и наблюдение на автопарк и товари за България, Европа, Близкия Изток и Азия онлайн и офлайн.'
+    titles:
+      autotrack_xl_gyro: 'GPS устройство Autotrack XL Gyro'
+      autotrack_lite: 'GPS устройство Autotrack Lite'
+      garmin_dezl_760LMT_7_inch: 'Навигационна система Garmin Dezl 760LMT 7 inch'
+      super_trackstick_gps_tracking_device: 'GPS устройство Super Trackstick'
+    descriptions:
+      autotrack_xl_gyro: ''
+      autotrack_lite: ''
+      garmin_dezl_760LMT_7_inch: ''
+      super_trackstick_gps_tracking_device: ''
   slogans:
     gps_system_for_monitoring_your_vehicles: 'GPS системи за наблюдение на aвтопарк'
   nav:

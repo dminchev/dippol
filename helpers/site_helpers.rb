@@ -1,18 +1,15 @@
 module SiteHelpers
 
   def page_title
-    title = "GPS Online Tracking Systems Dippol"
-    if data.page.title
-      title << " | " + data.page.title
-    end
-    title
+    title = @page_title ? @page_title : I18n.t('meta.title')
+    [title, I18n.t('company_name')].join ' | '
   end
-  
+
   def page_description
     if data.page.description
       description = data.page.description
     else
-      description = "GPS online tracking systems for monitoring your vehicles and cargos."
+      description = I18n.t('meta.description')
     end
     description
   end

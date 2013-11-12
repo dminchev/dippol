@@ -1,6 +1,20 @@
 ---
 en:
   hello: 'Hello'
+  company_name: 'Dippol'
+  meta:
+    title: 'GPS systems for vehicles monitoring and controll Bulgaria, Europe and rest of the world | Dippol'
+    description: 'GPS online tracking systems for monitoring your vehicles and cargos in Bulgaria, Europe, Middle East, Asia online and offline'
+    titles:
+      autotrack_xl_gyro: 'GPS устройство Autotrack XL Gyro'
+      autotrack_lite: 'GPS устройство Autotrack Lite'
+      garmin_dezl_760LMT_7_inch: 'Навигационна система Garmin Dezl 760LMT 7 inch'
+      super_trackstick_gps_tracking_device: 'GPS устройство Super Trackstick'
+    descriptions:
+      autotrack_xl_gyro: ''
+      autotrack_lite: ''
+      garmin_dezl_760LMT_7_inch: ''
+      super_trackstick_gps_tracking_device: ''
   slogans:
     gps_system_for_monitoring_your_vehicles: 'GPS system for monitoring your vehicles'
   nav:
@@ -252,3 +266,12 @@ en:
             options:
               - 'Option 1'
               - 'Option 2'
+  contacts:
+    office_plovdiv: 'Офис Пловдив'
+    office_plovdiv_address: 'гр. Пловдив, ул. "Гоздов Пазар" 2, ет. 2'
+    phones:
+      - '+359 887 495 203'
+      - '+359 888 516 773'
+    emails:
+      - 'gps@dippol.com'
+

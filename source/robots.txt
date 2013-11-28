@@ -1,3 +1,4 @@
 # robotstxt.org/
 
 User-agent: *
+Sitemap: http://dippol.com/sitemap.xml

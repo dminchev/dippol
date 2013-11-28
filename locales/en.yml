@@ -1,46 +1,46 @@
 ---
 en:
-  hello: 'Hello'
-  company_name: 'Dippol'
+  hello: 'Здравей'
+  company_name: 'Дипол'
   meta:
-    title: 'GPS systems for vehicles monitoring and controll Bulgaria, Europe and rest of the world | Dippol'
-    description: 'GPS online tracking systems for monitoring your vehicles and cargos in Bulgaria, Europe, Middle East, Asia online and offline'
+    title: 'GPS системи за контрол и наблюдение на автопарк България, Европа и света'
+    description: 'GPS системи за контрол, наблюдение и проследяване на автомобили, камиони, автопарк и товари за България, Европа, Близкия Изток и Азия онлайн и офлайн.'
     titles:
       autotrack_xl_gyro: 'GPS устройство Autotrack XL Gyro'
       autotrack_lite: 'GPS устройство Autotrack Lite'
       garmin_dezl_760LMT_7_inch: 'Навигационна система Garmin Dezl 760LMT 7 inch'
       super_trackstick_gps_tracking_device: 'GPS устройство Super Trackstick'
     descriptions:
-      autotrack_xl_gyro: ''
-      autotrack_lite: ''
-      garmin_dezl_760LMT_7_inch: ''
-      super_trackstick_gps_tracking_device: ''
+      autotrack_xl_gyro: 'GPS устройство Autotrack XL Gyro за проследяване на автомобили и камиони в България и Европа'
+      autotrack_lite: 'GPS устройство Autotrack Lite за проследяване на автомобили и камиони в България'
+      garmin_dezl_760LMT_7_inch: 'Навигационна система Garmin Dezl 760LMT 7 inch'
+      super_trackstick_gps_tracking_device: 'GPS устройство Super Trackstick за проследяване на автомобили и камиони в България и Европа'
   slogans:
-    gps_system_for_monitoring_your_vehicles: 'GPS system for monitoring your vehicles'
+    gps_system_for_monitoring_your_vehicles: 'GPS системи за наблюдение на aвтопарк'
   nav:
-    products: 'Our products'
-    services: 'Services'
-    how_it_works: 'How it works'
-    about: 'About us'
-    contacts: 'Contact us'
+    products: 'Нашите продукти'
+    services: 'Услуги'
+    how_it_works: 'Как работи'
+    about: 'За нас'
+    contacts: 'Свържете се с нас'
   actions:
-    order_now: 'Order now'
-    read_more: 'Read more'
+    order_now: 'Поръчайте'
+    read_more: 'Прочетете повече'
   tooltips:
-    follow_your_cargo: 'Follow your cargo'
-    limit_your_expences: 'Limit your expences'
-    manage_every_trip: 'Manage every trip'
-    improve_your_routine: 'Improve your routine'
+    follow_your_cargo: 'Следете вашия карго'
+    limit_your_expences: 'Намалете разходите си'
+    manage_every_trip: 'Управлявайте всяко пътуване'
+    improve_your_routine: 'Подобрете вашата рутина'
   titles:
-    how_it_works: 'How it works'
-    products: 'Our products'
-    services: 'The Services we provide you'
-    about: 'About us'
-    contacts: 'Contact us'
-    technical_spec: 'Technical Specifications'
-    product_features: 'Product Features'
-    configurator: 'Configurator'
-    benefits: 'Benefits of using our gps services'
+    how_it_works: 'Как работи системата'
+    products: 'Нашите продукти'
+    services: 'Услугите който предлагаме'
+    about: 'За нас'
+    contacts: 'Контакти'
+    technical_spec: 'Технически детайли'
+    product_features: 'Характеристики на продукта'
+    configurator: 'Конфигуратор'
+    benefits: 'Ползи от използването на нашите услуги'
   services:
     labels:
       - 'Постоянна информация за превозното средство'
@@ -50,9 +50,56 @@ en:
       - 'Дистанционно определяне на маршрута'
       - 'Дефиниране на фиксирани маршрути за шофьорите'
     titles:
-      active_system_lite: 'Active system Lite'
-      active_system_xl: ' Active system XL'
+      gps_system_bg_lite: 'Онлайн контрол за движение на територията на България - Ve-track Lite'
+      gps_system_bg_xl: 'Онлайн контрол за движение на територията на България - Ve-track XL'
+      gps_system_full: 'Онлайн контрол на движение на територията на Европейския съюз, Балкани и Русия - Ve-track EU'
+    prices:
+      gps_system_bg_lite:
+        v1:
+          - '68,90 лв <span>Устройство + монтаж</span>'
+          - '18,90 лв <span>Месечна такса</span>'
+          - '1 година <span>Срок на договор</span>'
+        v2:
+          - '34,90 лв <span>Устройство + монтаж</span>'
+          - '14,90 лв <span>Месечна такса</span>'
+          - '2 години <span>Срок на договор</span>'
+      gps_system_bg_xl:
+        v1:
+          - '<span>Устройство + монтаж</span> 199,90 лв'
+          - '<span>Месечна такса</span> 13,90 лв'
+          - '<span>Срок на договор</span> 1 година'
+        v2:
+          - '<span>Устройство + монтаж</span> 189,90 лв'
+          - '<span>Месечна такса</span> 11,90 лв'
+          - '<span>Срок на договор</span> 2 години'
+      gps_system_full:
+        v1:
+          - '<span>Устройство + монтаж</span> 199,90 лв'
+          - '<span>Месечна такса</span> 29,90 лв'
+          - '<span>Срок на договор</span> 1 година'
+        v2:
+          - '<span>Устройство + монтаж</span> 189,90 лв'
+          - '<span>Месечна такса</span> 27,90 лв'
+          - '<span>Срок на договор</span> 2 години'
     details:
+      gps_system_bg_lite:
+        - '<strong>Достъп:</strong> От всеки компютър и смартфон с интернет връзка.'
+        - '<strong>Визуализация:</strong> Местоположение върху различни електронни карти до ниво име на улица.'
+        - '<strong>Мониторинг:</strong> В реално време и за предишни периоди.'
+        - '<strong>Справки:</strong> Над 60 готови справки, включително и печат на пътен лист; експорт на данни в xls, pdf формати.'
+        - '<strong>Опции:</strong> Индентификация на водача.'
+      gps_system_bg_xl:
+        - '<strong>Достъп:</strong> От всеки компютър и смартфон с интернет връзка.'
+        - '<strong>Визуализация:</strong> Местоположение върху различни електронни карти до ниво име на улица.'
+        - '<strong>Мониторинг:</strong> В реално време и за предишни периоди.'
+        - '<strong>Справки:</strong> Над 60 готови справки, включително и печат на пътен лист; експорт на данни в xls, pdf формати.'
+        - '<strong>Опции:</strong> Индентификация на водача; Следене на горивото в резервоара/е/ с подробен отчет за изразходвано гориво по дати; Задаване на маршрути на водача през навигационната система на превозното средство; Следене и визуализиране на други системи и датчици на превозното средство.'
+      gps_system_full:
+        - '<strong>Достъп:</strong> От всеки компютър и смартфон с интернет връзка'
+        - '<strong>Визуализация:</strong> Местоположение върху различни електронни карти до ниво име на улица.'
+        - '<strong>Мониторинг:</strong> В реално време и за предишни периоди.'
+        - '<strong>Справки:</strong> Над 60 готови справки включително и печат на пътен лист; експорт на данни в xls, pdf формати.'
+        - '<strong>Опции:</strong> Индентификация на водача; Следене на горивото в резервоара/е/ с подробен отчет за изразходвано гориво по дати; Задаване на маршрути на водача през навигационната система на превозното средство; Следене и визуализиране на други системи и датчици на превозното средство.'
       active_lite:
         - 'Достъп до сървъра от всеки компютър  с Интернет в реално време;'
         - 'Визуализиране на подвижните обекти върху цифрова географска карта в реално време;'
@@ -74,15 +121,24 @@ en:
         - 'Следене на горивото в резервоара/е/ с подробен очет за изразходвано гориво по  дати, гориво-дневен отчет за периоди на зареждане и източване.'
         - 'Задаване на маршрути на водача през навигационната система на превозното средство'
         - 'Следене и визуализарани на други системи и датчици на превозното средство'
+    promo:
+      christmas: 'Коледна Промоция <span>(до 25.12.20013)</span>'
+      christmas_line: 'Безплатно GPS устройство за вашия камион или автомобил'
+      gps_system_bg_lite:
+        - 'Устройство: 0,00 лв.'
+        - 'Монтаж:  15,00 лв. (при клиента на територията на Пловдив и Асеновград)'
+        - 'Месечен абонамент: 14,90 лв. (двугодишен договор)'
+        - 'Забележка: Цените са без ДДС'
+
   how_it_works:
-    step_consultation_title: 'Choose your product'
-    step_consultation_desc: 'We will consult you and discuss exactly what product matches your needs.'
-    step_installation_title: 'Mounting the device'
-    step_installation_desc: "Your vehicles are being equipped with the device and ad-ons you've choosen."
-    step_sync_title: 'Sync the data'
-    step_sync_desc: 'All data from your vehicles will be synced to the server and stored in the database.'
-    step_manage_title: 'Manage your vehicles'
-    step_manage_desc: 'Your vehicles will be visible on a map with detailed info for each route and its details.'
+    step_consultation_title: 'Изберете вашия продукт'
+    step_consultation_desc: 'Ние ще Ви консултираме и ще объсдим от какво точно се нуждаете.'
+    step_installation_title: 'Монтиране на устройството'
+    step_installation_desc: "Вашите превозни средства се обурудват с избраната от Вас система."
+    step_sync_title: 'Синхронизиране на данните'
+    step_sync_desc: 'Информацията за всеко едно Ваше превозно средство се синхронизира към сървър и се запазва.'
+    step_manage_title: 'Управлявайте своя автопарк'
+    step_manage_desc: 'Вашите превозни средства са визуализирани на карта с подробна информация за всяко тяхно пътуване.'
   products:
     titles:
       autotrack_xl_gyro: 'Autotrack XL Gyro'
@@ -91,9 +147,9 @@ en:
       super_trackstick_gps_tracking_device: 'Super Trackstick GPS Tracking Device'
     slogans:
       autotrack_xl_gyro: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
-      autotrack_lite: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
-      garmin_dezl_760LMT_7_inch: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
-      super_trackstick_gps_tracking_device: 'Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време.'
+      autotrack_lite: 'Autotrack Lite е олекотена версия на за GPS наблюдение и контрол на Вашия автопарк.'
+      garmin_dezl_760LMT_7_inch: '7 инчова навигация улесняваща намирането и следването на маршрути.'
+      super_trackstick_gps_tracking_device: 'Super Trackstick е устройство, което не се нуждае от монтаж и събира подробна информация за автомобила пренасящ го'
     details:
       autotrack_xl_gyro:
         p1: "Autotrack XL Gyro е висококачествен и ефективен продукт за наблюдение и контрол на Вашия автопарк в реално време."
@@ -251,7 +307,10 @@ en:
               - 'Option 1'
               - 'Option 2'
       super_trackstick_gps_tracking_device:
-        p1: 'Device info'
+        p1: 'Най-добрият избор за правителствени агенции, полиция, разузнаване, и вътрешната сигурност на персонала. Устойчив на атмосферни влияния,с подвижна магнитна стойка за скрита инсталация.'
+        p2: 'Маршрута може да бъде видян на сателитни снимки, използвайки най-новите технологии за картографиране от Google ™ Earth.'
+        p3: 'Super Trackstick непрекъснато записва Вашият точен маршрут, времето на престой, скоростта, посоката и друга ценна информация,която може бързо да се изтегли и гледа на компютъра. Той дори има вграден собствен датчик за температура, за да наблюдава заобикалящата го среда. Детектора за вибрации в съчетание с GPS технология за ниска консумация на енергия, помага да се направи идеален за спестяване на енергия и удължава времето за работа на батерия.'
+        p4: 'Без месечни такси!'
         features:
           - 'Feature 1'
           - 'Feature 2'
@@ -274,4 +333,22 @@ en:
       - '+359 888 516 773'
     emails:
       - 'gps@dippol.com'
-
+  about:
+    p1: 'Фирма „Дипол” ООД е създадена през 2003 година. От 2005 година е партньор и дистрибутор на фирма „Джи Пи Ес Сървисиз” в областта GPS технологии и внедряването им във Вашия бизнес, като предлага и реализира решения за адекватен контрол върху автопарка.'
+    our_clients: 'Част от нашите клиенти'
+    clients:
+      - 'Алкател'
+      - 'НУРТС'
+      - 'Агенция по заетостта'
+      - 'Фортуна'
+      - 'Аутостар'
+      - 'Чайка Фарма'
+      - 'Мастер'
+      - 'Телекабел'
+      - 'Викинг Т'
+      - 'Дилтекс'
+      - 'МДС България'
+      - 'МаксТранс'
+      - 'Аскания Кастинг'
+      - 'Аутоплюс'
+      - 'Екос Медика'

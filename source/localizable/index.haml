@@ -1,4 +1,10 @@
 #intro
+  #promo-line
+    .wrapper
+      - hook = 'services-gps-system-bg-lite'
+      = link_to '/', anchor: hook, data: {anchor: hook} do
+        %h1= I18n.t('services.promo.christmas')
+        %h2= I18n.t('services.promo.christmas_line')
   .wrapper
     .truck
       .holder-tooltips.left
@@ -26,35 +32,42 @@
 
     %ul.clearfix
       %li
+        - title = I18n.t('how_it_works.step_consultation_title')
         %span.arrow
         %header
-          = image_tag 'steps/clipboard.svg'
+          = image_tag 'steps/clipboard.png', alt: title, title: title
         %h2
           1.
           = I18n.t('how_it_works.step_consultation_title')
         %article
           %p= I18n.t('how_it_works.step_consultation_desc')
+
       %li
+        - title = I18n.t('how_it_works.step_installation_title')
         %span.arrow
         %header
-          = image_tag 'steps/truck.svg'
+          = image_tag 'steps/truck.png', alt: title, title: title
         %h2
           2.
           = I18n.t('how_it_works.step_installation_title')
         %article
           %p= I18n.t('how_it_works.step_installation_desc')
+
       %li.upload
+        - title = I18n.t('how_it_works.step_sync_title')
         %span.arrow
         %header
-          = image_tag 'steps/upload.svg'
+          = image_tag 'steps/upload.png', alt: title, title: title
         %h2
           3.
           = I18n.t('how_it_works.step_sync_title')
         %article
           %p= I18n.t('how_it_works.step_sync_desc')
+
       %li
+        - title = I18n.t('how_it_works.step_manage_title')
         %header
-          = image_tag 'steps/map.svg'
+          = image_tag 'steps/map.png', alt: title, title: title
         %h2
           4.
           = I18n.t('how_it_works.step_manage_title')
@@ -65,44 +78,41 @@
   .wrapper
     %h1.title= I18n.t('titles.services')
 
-    %h2.title= I18n.t('services.titles.active_system_lite')
-    %ul.services.active_system_lite.clearfix
-      - I18n.t('services.details.active_lite').each do |item|
-        %li
-          %article= item
+    - %w(gps_system_bg_lite gps_system_bg_xl gps_system_full).each do |plan|
+      - hook = "services-#{plan.gsub('_', '-')}"
+      %article.service.clearfix{:class => plan.gsub('_', '-'), id: hook}
+        / %h2.title= I18n.t("services.titles.#{plan}")
+        %h2.title
+          = link_to I18n.t("services.titles.#{plan}"), '/', anchor: hook, data: {anchor: hook}
 
-    %h2.title= I18n.t('services.titles.active_system_xl')
-    %ul.services
-      - I18n.t('services.details.active_xl').each do |item|
-        %li= item
+        %ul.services
+          - I18n.t("services.details.#{plan}").each do |item|
+            %li= item
+        %aside.price.clearfix
+          %div
+            - I18n.t("services.prices.#{plan}.v1").each do |item|
+              = item
+          %div
+            - I18n.t("services.prices.#{plan}.v2").each do |item|
+              = item
+          %span.box
+
+          - if plan == 'gps_system_bg_lite'
+            %footer.promo
+              %article
+                %h3= I18n.t('services.promo.christmas')
+                %ul
+                  - I18n.t('services.promo.gps_system_bg_lite').each do |item|
+                    %li= item
+
 
     %h1.title= I18n.t('titles.benefits')
 
     %ul.benefits.clearfix
       - I18n.t('services.labels').each do |item|
         %li
+          %span.tick
           %h2= item
-
-    - if false
-      %ul.features.clearfix
-        %li
-          %h2= I18n.t('services.labels.basic')
-          %ul.list
-            - I18n.t('services.features.basic').each do |item|
-              %li= item
-
-        %li
-          %h2= I18n.t('services.labels.extended')
-          %ul.list
-            - I18n.t('services.features.extended').each do |item|
-              %li= item
-        %li
-          %h2 Add-ons
-          %ul.list
-            %li Item 1
-            %li Item 2
-            %li Item 3
-            %li Item 4
 
 #products
   .wrapper
@@ -111,11 +121,12 @@
     %ul.clearfix
       - %w(autotrack-xl-gyro autotrack-lite garmin-dezl-760LMT-7-inch super-trackstick-gps-tracking-device).each do |item|
         %li.clearfix
+          - title = I18n.t("products.titles.#{item.gsub('-', '_')}")
           %aside
             = link_to "products/#{item}.html" do
-              = image_tag "products/#{item}-square.png"
+              = image_tag "products/#{item}-square.png", alt: title, title: title
           %article
-            %h3= link_to I18n.t("products.titles.#{item.gsub('-', '_')}"), "products/#{item}.html"
+            %h3= link_to title, "products/#{item}.html"
             %p= I18n.t("products.slogans.#{item.gsub('-', '_')}")
             = link_to I18n.t('actions.read_more'), "products/#{item}.html", id: "product-#{item}-link", class: 'read-more'
 #configurator
@@ -123,8 +134,17 @@
     %h1.title= I18n.t('titles.configurator')
 
 #about-us
-  .wrapper
+  .wrapper.clearfix
     %h1.title= I18n.t('titles.about')
+
+    %article.about
+      %p= I18n.t('about.p1')
+    %article.clients
+      %h2.title= I18n.t('about.our_clients')
+      %ul.clearfix
+        - I18n.t('about.clients').each do |client|
+          %li= client
+
 
 #contact-us
   .wrapper.clearfix
@@ -139,6 +159,8 @@
         - I18n.t('contacts.emails').each do |email|
           %li= email
 
+      .social
+        .fb-like{"data-action" => "like", "data-href" => "http://www.facebook.com/dippol.gps.systems", "data-layout" => "standard", "data-share" => "true", "data-show-faces" => "true", "data-width" => "460"}
     #map
 
 

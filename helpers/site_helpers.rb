@@ -14,4 +14,7 @@ module SiteHelpers
     description
   end
 
+  def page_keywords
+    @keywords || I18n.t('meta.keywords')
+  end
 end

@@ -1,7 +1,7 @@
 # require vendor/jquery.reveal.js
 scrollToElement = (element, speed = 1000) ->
   $("html, body").animate
-    scrollTop: element.offset().top - 80
+    scrollTop: element.offset().top - 110
   , speed
 
 fixHeight = (holder, element) ->
@@ -29,7 +29,7 @@ $(document).ready ->
   # doc.on 'click', '.read-more', ->
   #   location.hash = $(this).attr 'id'
 
-  doc.on 'click', '#header nav a', ->
+  doc.on 'click', '#header nav a, #services h2.title a, #promo-line a', ->
     event.preventDefault() unless $('.product-view').length > 0
     scrollToElement $('#' + $(this).data('anchor'))
     location.hash = $(this).data('anchor')

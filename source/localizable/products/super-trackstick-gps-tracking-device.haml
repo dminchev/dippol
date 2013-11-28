@@ -11,22 +11,24 @@
       %p= I18n.t("products.details.#{name}.p2")
       %p= I18n.t("products.details.#{name}.p3")
 
-    %h2.title= I18n.t('titles.product_features')
-    %ul.features.clearfix
-      - I18n.t("products.details.#{name}.features").each do |feature|
-        %li
-          %span +
-          = feature
+    - if false
+      %h2.title= I18n.t('titles.product_features')
+      %ul.features.clearfix
+        - I18n.t("products.details.#{name}.features").each do |feature|
+          %li
+            %span +
+            = feature
 
-    %h2.title= I18n.t('titles.technical_spec')
-    .tech.clearfix
-      - arr = I18n.t("products.details.#{name}.tech")
-      - left,right = arr.each_slice( (arr.size/2.0).round ).to_a
-      %article
-        - left.each do |item|
-          %h4= item['name']
-          = item['options'].join '<br>'
-      %article
-        - right.each do |item|
-          %h4= item['name']
-          = item['options'].join '<br>'
+
+      %h2.title= I18n.t('titles.technical_spec')
+      .tech.clearfix
+        - arr = I18n.t("products.details.#{name}.tech")
+        - left,right = arr.each_slice( (arr.size/2.0).round ).to_a
+        %article
+          - left.each do |item|
+            %h4= item['name']
+            = item['options'].join '<br>'
+        %article
+          - right.each do |item|
+            %h4= item['name']
+            = item['options'].join '<br>'

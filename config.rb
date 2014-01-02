@@ -95,9 +95,9 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :rsync
-  deploy.host   = "37.139.12.189"
-  deploy.path   = "/mnt/www/dippol.com/current/public"
-  deploy.user  = "root"
+  deploy.host   = "95.85.32.111"
+  deploy.path   = "/home/deploy/dippol.com/current/public"
+  deploy.user  = "deploy"
   deploy.build_before = true
 
   # deploy.port  = 5309 # ssh port, default: 22

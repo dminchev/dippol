@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro {
   position: relative;
   padding: 40px 0;
-  padding-top: 160px; // promo
+  // padding-top: 160px; // promo
   border-bottom: 1px solid $clr-grey-darker;
 
   .wrapper {
@@ -344,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
     text-align: left;
     margin-top: 0px;
-    text-transform: capitalize;
+    text-transform: none;
   }
 
   ul.services {
@@ -530,11 +530,11 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
 
-    &.gps-system-bg-lite {
-      ul.services {
-        min-height: 341px;
-      }
-    }
+    // &.gps-system-bg-lite {
+    //   ul.services {
+    //     min-height: 341px;
+    //   }
+    // }
 
     &.gps-system-bg-xl {
       aside.price {

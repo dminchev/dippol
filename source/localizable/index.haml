@@ -1,10 +1,11 @@
 #intro
-  #promo-line
-    .wrapper
-      - hook = 'services-gps-system-bg-lite'
-      = link_to '/', anchor: hook, data: {anchor: hook} do
-        %h1= I18n.t('services.promo.christmas')
-        %h2= I18n.t('services.promo.christmas_line')
+  - if false
+    #promo-line
+      .wrapper
+        - hook = 'services-gps-system-bg-lite'
+        = link_to '/', anchor: hook, data: {anchor: hook} do
+          %h1= I18n.t('services.promo.christmas')
+          %h2= I18n.t('services.promo.christmas_line')
   .wrapper
     .truck
       .holder-tooltips.left
@@ -97,13 +98,14 @@
               = item
           %span.box
 
-          - if plan == 'gps_system_bg_lite'
-            %footer.promo
-              %article
-                %h3= I18n.t('services.promo.christmas')
-                %ul
-                  - I18n.t('services.promo.gps_system_bg_lite').each do |item|
-                    %li= item
+          - if false
+            - if plan == 'gps_system_bg_lite'
+              %footer.promo
+                %article
+                  %h3= I18n.t('services.promo.christmas')
+                  %ul
+                    - I18n.t('services.promo.gps_system_bg_lite').each do |item|
+                      %li= item
 
 
     %h1.title= I18n.t('titles.benefits')
